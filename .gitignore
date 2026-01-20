@@ -28,6 +28,9 @@ wheels/
 *.sqlite
 *.sqlite3
 
+# CSV exports
+*.csv
+
 # IDE
 .vscode/
 .idea/
