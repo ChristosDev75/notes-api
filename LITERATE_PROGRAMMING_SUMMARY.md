@@ -284,6 +284,12 @@ Within **API Application**:
 - [ ] Build Python AST parser for annotation extraction
 - [ ] Implement C4 model builder from annotations
 - [ ] Generate Structurizr DSL output
+- [ ] **TODO: Handle multi-line annotation rejoining** - Current Python 
+      code wraps C4 annotations at 79 chars for PEP8 compliance. The 
+      tangler must rejoin these multi-line annotations into single-line 
+      descriptions for Structurizr DSL to prevent awkward text wrapping 
+      in rendered diagrams. Alternative: relax 79-char limit for C4 
+      annotation lines only.
 - [ ] Add CLI interface
 - [ ] Create example output for notes-api
 
