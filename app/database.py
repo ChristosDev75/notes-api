@@ -18,7 +18,8 @@ C4 MODEL MAPPING
 ----------------
 @c4-container: Database Layer
 @c4-technology: Python 3.12, SQLAlchemy 2.0, SQLite 3
-@c4-description: ORM-based persistence layer managing note storage and retrieval
+@c4-description: ORM-based persistence layer managing note storage and retrieva
+          l
 @c4-responsibilities:
     - Maintain database connection and session lifecycle
     - Define database schema through ORM models
@@ -43,7 +44,8 @@ DESIGN DECISIONS
    - Rationale: Automatic SQL generation reduces errors
    - Rationale: Database agnostic (easy to switch to PostgreSQL later)
    - Trade-off: Slight performance overhead vs raw SQL
-   - Alternative Considered: Direct SQL with aiosqlite (rejected for simplicity)
+   - Alternative Considered: Direct SQL with aiosqlite (rejected
+                             for simplicity)
 
 3. **Session Management Pattern**
    - Pattern: Dependency injection via get_db() generator
@@ -68,7 +70,8 @@ DESIGN DECISIONS
 SYSTEM INTERACTIONS
 -------------------
 @c4-uses: SQLite Database - "Reads and writes note data" - "SQL/SQLite3"
-@c4-used-by: API Application (app.main) - "Requests database sessions" - "SQLAlchemy ORM"
+@c4-used-by: API Application (app.main) - "Requests database sessions" - "SQLAl
+          chemy ORM"
 
 DATABASE SCHEMA
 ---------------
@@ -100,7 +103,7 @@ FUTURE ENHANCEMENTS
 - [ ] Add database connection pooling for production
 - [ ] Implement read replicas for scaling read-heavy workloads
 
-================================================================================
+===============================================================================
 """
 
 from sqlalchemy import create_engine, Column, Integer, String, DateTime
@@ -163,7 +166,8 @@ class NoteDB(Base):
     
     DESIGN CHOICES
     --------------
-    1. Separate from Pydantic models (NoteCreate, Note) for separation of concerns
+    1. Separate from Pydantic models (NoteCreate, Note) for
+       separation of concerns
        - NoteDB: Database representation (ORM)
        - Note: API response representation (Pydantic)
        - NoteCreate: API request representation (Pydantic)

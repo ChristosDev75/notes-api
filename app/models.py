@@ -1,7 +1,7 @@
 """
-================================================================================
+===============================================================================
 DATA MODELS - REQUEST/RESPONSE SCHEMAS
-================================================================================
+===============================================================================
 
 Module: app.models
 Purpose: Pydantic models for API request validation and response serialization
@@ -10,7 +10,8 @@ Last Updated: 2025-01-21
 
 ARCHITECTURAL CONTEXT
 ---------------------
-This module defines the data transfer objects (DTOs) used for API communication.
+This module defines the data transfer objects (DTOs) used for API
+communication.
 These Pydantic models handle validation, serialization, and documentation of
 all data flowing in and out of the API.
 
@@ -18,7 +19,8 @@ C4 MODEL MAPPING
 ----------------
 @c4-component: Data Validation Layer
 @c4-technology: Python 3.12, Pydantic 2.0
-@c4-description: Schema definitions for API requests and responses with automatic validation
+@c4-description: Schema definitions for API requests and responses with
+                 automatic validation
 @c4-responsibilities:
     - Validate incoming request data against defined schemas
     - Serialize outgoing response data to JSON
@@ -74,7 +76,8 @@ Future Enhancements:
 
 SYSTEM INTERACTIONS
 -------------------
-@c4-used-by: API Application (app.main) - "Validates requests and formats responses"
+@c4-used-by: API Application (app.main) - "Validates requests and formats
+             responses"
 
 ERROR HANDLING
 --------------
@@ -94,7 +97,7 @@ FUTURE ENHANCEMENTS
 - [ ] Add updated_at timestamp for tracking modifications
 - [ ] Add owner/user_id for multi-user support
 
-================================================================================
+===============================================================================
 """
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -112,7 +115,8 @@ class NoteCreate(BaseModel):
     USAGE
     -----
     POST /notes endpoint expects request body matching this schema.
-    FastAPI automatically validates the request and converts JSON to this model.
+    FastAPI automatically validates the request and converts JSON to
+    this model.
 
     VALIDATION
     ----------
