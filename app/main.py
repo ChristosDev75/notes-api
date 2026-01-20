@@ -1,16 +1,21 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
+from contextlib import asynccontextmanager
 
 from .database import get_db, init_db, NoteDB
 from .models import Note, NoteCreate, NoteUpdate
 
-app = FastAPI(title="Notes API", version="0.1.0")
 
-
-@app.on_event("startup")
-def startup_event():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
     init_db()
+    yield
+    # Shutdown (if needed in the future)
+
+
+app = FastAPI(title="Notes API", version="0.1.0", lifespan=lifespan)
 
 
 @app.get("/")
