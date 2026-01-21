@@ -50,7 +50,7 @@ jobs:
     - name: Install c4-literate-python
       run: |
         # Clone the c4-literate-python tool
-        git clone https://github.com/yourusername/c4-literate-python.git
+        git clone https://github.com/ChristosDev75/c4-literate-python.git
         cd c4-literate-python
         pip install -e .
     
