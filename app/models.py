@@ -76,8 +76,7 @@ Future Enhancements:
 
 SYSTEM INTERACTIONS
 -------------------
-@c4-used-by: API Application (app.main) - "Validates requests and formats
-             responses"
+@c4-used-by: API Application - "Validates requests and formats responses"
 
 ERROR HANDLING
 --------------

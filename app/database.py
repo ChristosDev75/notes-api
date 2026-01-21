@@ -69,9 +69,7 @@ DESIGN DECISIONS
 
 SYSTEM INTERACTIONS
 -------------------
-@c4-uses: SQLite Database - "Reads and writes note data" - "SQL/SQLite3"
-@c4-used-by: API Application (app.main) - "Requests database sessions" - "SQLAl
-          chemy ORM"
+@c4-used-by: API Application - "Requests database sessions" - "SQLAlchemy ORM"
 
 DATABASE SCHEMA
 ---------------

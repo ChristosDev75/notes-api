@@ -63,10 +63,8 @@ DESIGN DECISIONS
 
 SYSTEM INTERACTIONS
 -------------------
-@c4-uses: Database Layer (app.database) - "Manages note
-          persistence" - "SQLAlchemy ORM"
-@c4-uses: Data Validation Layer (app.models) - "Validates request/response
-          data" - "Pydantic"
+@c4-uses: Database Layer - "Manages note persistence" - "SQLAlchemy ORM"
+@c4-uses: Data Validation Layer - "Validates request/response data" - "Pydantic"
 @c4-used-by-person: API Consumer - "Creates, reads, and deletes
                     notes" - "HTTPS/JSON"
 
