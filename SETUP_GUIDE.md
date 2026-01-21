@@ -150,7 +150,7 @@ docker run -it --rm -p 8080:8080 \
 ### Modifying Architecture
 
 Architecture is documented using C4 annotations in Python docstrings.
-See the [c4-literate-python schema](https://github.com/yourusername/c4-literate-python/blob/main/SCHEMA.md)
+See the [c4-literate-python schema](https://github.com/ChristosDev75/c4-literate-python/blob/main/SCHEMA.md)
 for annotation reference.
 
 Example:
