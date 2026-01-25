@@ -46,3 +46,7 @@ htmlcov/
 # Environment
 .env
 .env.local
+
+# Structurizr Lite working files
+.structurizr/
+workspace.json
