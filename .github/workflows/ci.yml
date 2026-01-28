@@ -46,10 +46,9 @@ jobs:
     
     - name: Install c4-literate-python
       run: |
-        # For now, install from local path or git repo
-        # Replace with: pip install c4-literate-python
-        # once published to PyPI
-        pip install git+https://github.com/ChristosDev75/c4-literate-python.git@main
+        # Install from private repo using fine-grained PAT with read-only access
+        # Replace with: pip install c4-literate-python once published to PyPI
+        pip install git+https://${{ secrets.C4_LITERATE_READ_TOKEN }}@github.com/ChristosDev75/c4-literate-python.git@main
     
     - name: Validate C4 annotations
       run: |
